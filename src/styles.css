@@ -1,0 +1,723 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Outfit:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --bg: #07090d;
+  --surface: #0c1017;
+  --card: #111824;
+  --card-strong: #151f2d;
+  --border: #233246;
+  --accent: #00d4ff;
+  --accent-soft: rgba(0, 212, 255, 0.12);
+  --gold: #f0a500;
+  --green: #00e676;
+  --text: #e6edf4;
+  --text-soft: #9bacbd;
+  --muted: #647589;
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.36);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Outfit", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+summary {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    radial-gradient(circle at 82% 12%, rgba(0, 212, 255, 0.12), transparent 26rem),
+    var(--bg);
+  background-size: 44px 44px, 44px 44px, auto, auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem clamp(1rem, 4vw, 3rem);
+  border-bottom: 1px solid rgba(35, 50, 70, 0.75);
+  background: rgba(7, 9, 13, 0.86);
+  backdrop-filter: blur(16px);
+}
+
+.brand,
+.nav-cta,
+.button {
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.brand {
+  display: grid;
+  width: 2.6rem;
+  height: 2.6rem;
+  place-items: center;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-family: "Fira Code", monospace;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: clamp(0.75rem, 2vw, 1.4rem);
+}
+
+.nav-links a,
+.site-footer a {
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.nav-links a.active,
+.nav-links a:hover,
+.site-footer a:hover {
+  color: var(--accent);
+}
+
+.nav-cta {
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.65rem 1rem;
+}
+
+.section {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(5rem, 9vw, 7.5rem) clamp(1rem, 4vw, 3rem);
+}
+
+.alt-section {
+  max-width: none;
+  background: rgba(12, 16, 23, 0.82);
+}
+
+.alt-section > * {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+  min-height: calc(100vh - 74px);
+  padding-top: clamp(4rem, 8vw, 7rem);
+}
+
+.availability,
+.eyebrow,
+.typewriter,
+.tag,
+.status-pill,
+.company-list small {
+  font-family: "Fira Code", monospace;
+}
+
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 1.5rem;
+  color: var(--text-soft);
+  border: 1px solid var(--border);
+  background: var(--accent-soft);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.78rem;
+}
+
+.availability span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 12px var(--green);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(3.2rem, 8vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.typewriter {
+  min-height: 2rem;
+  color: var(--text-soft);
+  font-size: clamp(1.05rem, 2vw, 1.45rem);
+}
+
+.typewriter span,
+.eyebrow,
+.section-header h2,
+.profile-role,
+.status-pill {
+  color: var(--accent);
+}
+
+.typewriter i {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 0.2rem;
+  background: var(--accent);
+  animation: blink 1s step-end infinite;
+}
+
+.hero-summary,
+.hero-detail,
+.section-intro,
+.panel-summary,
+.skill-card p,
+.personal-project p,
+.story-list p,
+.project-body p {
+  color: var(--text-soft);
+  line-height: 1.8;
+}
+
+.hero-summary,
+.hero-detail {
+  max-width: 660px;
+  font-size: 1.06rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.8rem;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.75rem 1.2rem;
+}
+
+.button.primary {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.profile-card,
+.skill-card,
+.experience-panel,
+.project-card,
+.personal-project,
+.contact-card,
+.timeline-card {
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--card-strong), var(--card));
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.profile-card {
+  display: grid;
+  gap: 1.2rem;
+  padding: 1.5rem;
+}
+
+.portrait-frame {
+  position: relative;
+  width: "auto";
+  aspect-ratio: 0.72;
+  justify-self: center;
+  border: 1px solid rgba(0, 212, 255, 0.36);
+  border-radius: 8px;
+  background: var(--surface);
+  overflow: hidden;
+  box-shadow: 0 20px 46px rgba(0, 0, 0, 0.42);
+}
+
+.portrait-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.portrait-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.profile-name {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.profile-role,
+.profile-meta {
+  margin: 0.25rem 0 0;
+}
+
+.profile-meta {
+  display: grid;
+  gap: 0.45rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.stats-row {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--border);
+  margin-top: 1rem;
+}
+
+.stats-row div {
+  padding: 1.5rem;
+  border-right: 1px solid var(--border);
+}
+
+.stats-row div:last-child {
+  border-right: 0;
+}
+
+.stats-row strong {
+  display: block;
+  color: var(--accent);
+  font-size: 2rem;
+}
+
+.stats-row span {
+  color: var(--muted);
+}
+
+.section-header {
+  margin-bottom: 2.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.7rem;
+  font-size: 0.8rem;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.section-intro {
+  max-width: 720px;
+  margin: 1rem 0 0;
+}
+
+.card-grid,
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.skill-card,
+.personal-project {
+  padding: 1.4rem;
+}
+
+.skill-card h3,
+.personal-project h3,
+.experience-panel h3,
+.story-list h3,
+.timeline-card h3 {
+  margin: 0;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1rem;
+}
+
+.tag {
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 4px;
+  padding: 0.24rem 0.55rem;
+  font-size: 0.72rem;
+}
+
+.experience-layout,
+.about-layout {
+  display: grid;
+  grid-template-columns: 290px minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.company-list {
+  display: grid;
+  gap: 0.6rem;
+  align-self: start;
+  position: sticky;
+  top: 5.5rem;
+}
+
+.company-list button {
+  cursor: pointer;
+  text-align: left;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--muted);
+  border-radius: 0 8px 8px 0;
+  background: transparent;
+  color: var(--text);
+  padding: 1rem;
+}
+
+.company-list button.active {
+  border-color: var(--accent);
+  border-left-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.company-list span,
+.company-list small {
+  display: block;
+  color: var(--muted);
+  margin-top: 0.28rem;
+}
+
+.experience-panel {
+  padding: 1.5rem;
+}
+
+.panel-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.panel-heading p {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+}
+
+.status-pill {
+  border: 1px solid rgba(0, 230, 118, 0.32);
+  border-radius: 999px;
+  background: rgba(0, 230, 118, 0.1);
+  color: var(--green);
+  padding: 0.25rem 0.7rem;
+  font-size: 0.72rem;
+}
+
+.project-stack {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+.project-card {
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.project-card summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  list-style: none;
+  padding: 1rem 1.2rem;
+}
+
+.project-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-card summary small {
+  display: block;
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+
+.project-card[open] .summary-action {
+  transform: rotate(45deg);
+}
+
+.summary-action {
+  color: var(--accent);
+  font-family: "Fira Code", monospace;
+  font-size: 1.3rem;
+  transition: transform 0.2s ease;
+}
+
+.project-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  border-top: 1px solid var(--border);
+  padding: 1rem 1.2rem 1.2rem;
+}
+
+.project-body .tag-list,
+.project-body > a {
+  grid-column: 1 / -1;
+}
+
+.project-body h4 {
+  margin: 0 0 0.4rem;
+  color: var(--accent);
+}
+
+.project-body a,
+.personal-project a,
+.contact-card a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.personal-project {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.muted-text {
+  color: var(--muted) !important;
+}
+
+.about-layout {
+  grid-template-columns: minmax(0, 1fr) 360px;
+}
+
+.story-list {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.story-list article,
+.contact-card,
+.timeline-card {
+  padding: 1.3rem;
+}
+
+.story-list article {
+  border-left: 3px solid var(--accent);
+  background: rgba(17, 24, 36, 0.58);
+}
+
+.contact-card {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.contact-card span {
+  color: var(--text-soft);
+}
+
+.timeline-card {
+  align-self: start;
+}
+
+.timeline-card ol {
+  margin: 1rem 0 2rem;
+  padding-left: 1.2rem;
+}
+
+.timeline-card li {
+  margin-bottom: 1rem;
+  color: var(--text-soft);
+}
+
+.timeline-card time,
+.timeline-card strong,
+.timeline-card span {
+  display: block;
+}
+
+.timeline-card time {
+  color: var(--accent);
+  font-family: "Fira Code", monospace;
+  font-size: 0.78rem;
+}
+
+.timeline-card strong {
+  color: var(--text);
+}
+
+.learning-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.learning-list div div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+}
+
+progress {
+  width: 100%;
+  height: 0.45rem;
+  border: 0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+  background: var(--border);
+}
+
+progress::-webkit-progress-value {
+  background: linear-gradient(90deg, var(--accent), var(--gold));
+}
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 2rem clamp(1rem, 4vw, 3rem);
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+}
+
+.site-footer div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.site-footer strong {
+  color: var(--accent);
+}
+
+.card-grid,
+.project-grid,
+.experience-layout,
+.about-layout {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card-grid.is-visible,
+.project-grid.is-visible,
+.experience-layout.is-visible,
+.about-layout.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 980px) {
+  .hero,
+  .experience-layout,
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card {
+    max-width: 420px;
+  }
+
+  .card-grid,
+  .project-grid,
+  .project-body {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .company-list {
+    position: static;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    grid-template-columns: auto 1fr;
+  }
+
+  .nav-links {
+    justify-content: flex-end;
+  }
+
+  .nav-links a:not(.active) {
+    display: none;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .stats-row,
+  .card-grid,
+  .project-grid,
+  .project-body {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-row div {
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .stats-row div:last-child {
+    border-bottom: 0;
+  }
+
+  .panel-heading,
+  .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
