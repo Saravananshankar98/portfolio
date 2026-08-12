@@ -376,6 +376,7 @@ summary {
 }
 
 .tag {
+   height: 24px;
   border: 1px solid rgba(0, 212, 255, 0.25);
   background: var(--accent-soft);
   color: var(--accent);

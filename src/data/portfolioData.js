@@ -77,8 +77,8 @@ export const companies = [
     id: "lapis",
     company: "Lapis Data Analytics Pvt. Ltd.",
     role: "Software Engineer",
-    period: "Nov 2024 - Present",
-    current: true,
+    period: "Nov 2024 - Jul 2026",
+    current: false,
     summary:
       "Working on data analytics and blockchain products with a focus on responsive UI fixes, layout reliability, and production frontend quality.",
     projects: [
@@ -146,6 +146,24 @@ export const companies = [
 
 export const personalProjects = [
   {
+    name: "MoneyFlow",
+    status: "Personal Project | React Native",
+    overview:
+      "A local-first personal finance app for managing multiple accounts, tracking income and expenses, transferring money, and maintaining balances automatically.",
+    contribution:
+      "Designed and developed the app independently with reusable components, centralized state management, transaction balance logic, form validation, and local data persistence.",
+    reason:
+      "Built to strengthen React Native and TypeScript skills through a practical application with real-world business logic.",
+    tech: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Zustand",
+      "AsyncStorage",
+    ],
+    // github: "https://github.com/Saravananshankar98/MoneyFlow",
+  },
+  {
     name: "TVS Bike Details",
     status: "Code on GitHub",
     github: "https://github.com/Saravananshankar98/TVSBikeDetails",
@@ -171,12 +189,32 @@ export const personalProjects = [
 ];
 
 export const timeline = [
-  { year: "2015", title: "Started BSc Computer Science", detail: "Thiruvalluvar University" },
+  {
+    year: "2015",
+    title: "Started BSc Computer Science",
+    detail: "Thiruvalluvar University",
+  },
   { year: "2018", title: "Graduated", detail: "Computer Science foundation" },
-  { year: "2022", title: "Joined Bloomlync", detail: "First full-time frontend role" },
-  { year: "2023", title: "Led Prism Account Platform", detail: "Design to deployment ownership" },
-  { year: "2024", title: "Joined Lapis Data Analytics", detail: "Software Engineer" },
-  { year: "Now", title: "Learning and building", detail: "React Native, Next.js, Python" },
+  {
+    year: "2022",
+    title: "Joined Bloomlync",
+    detail: "First full-time frontend role",
+  },
+  {
+    year: "2023",
+    title: "Led Prism Account Platform",
+    detail: "Design to deployment ownership",
+  },
+  {
+    year: "2024",
+    title: "Joined Lapis Data Analytics",
+    detail: "Software Engineer",
+  },
+  {
+    year: "Now",
+    title: "Learning and building",
+    detail: "React Native, Next.js, Python",
+  },
 ];
 
 export const learning = [
@@ -189,22 +227,18 @@ export const learning = [
 export const aboutStories = [
   {
     title: "The Beginning",
-    body:
-      "I am originally from Thiruvannamalai, Tamil Nadu. I completed my BSc Computer Science at Thiruvalluvar University from 2015 to 2018, where I built my programming foundation.",
+    body: "I am originally from Thiruvannamalai, Tamil Nadu. I completed my BSc Computer Science at Thiruvalluvar University from 2015 to 2018, where I built my programming foundation.",
   },
   {
     title: "First Role - Bloomlync",
-    body:
-      "At Bloomlync, I worked as a Front-End Developer across Prism-Web, Prism-Terminal, Mentor ERP, and the Prism Account Platform. The strongest highlight was taking ownership of the Prism Account Platform end to end.",
+    body: "At Bloomlync, I worked as a Front-End Developer across Prism-Web, Prism-Terminal, Mentor ERP, and the Prism Account Platform. The strongest highlight was taking ownership of the Prism Account Platform end to end.",
   },
   {
     title: "Current Role - Lapis Data Analytics",
-    body:
-      "At Lapis Data Analytics, I work on more complex production UIs including ChainEdge, a live blockchain analytics product. My focus is responsive quality, reliable layouts, and clean frontend code.",
+    body: "At Lapis Data Analytics, I work on more complex production UIs including ChainEdge, a live blockchain analytics product. My focus is responsive quality, reliable layouts, and clean frontend code.",
   },
   {
     title: "How I Work",
-    body:
-      "I care about ownership, clear communication, readable code, testing, and improving the user experience through small careful details.",
+    body: "I care about ownership, clear communication, readable code, testing, and improving the user experience through small careful details.",
   },
 ];
