@@ -15,8 +15,8 @@ export function Experience() {
   return (
     <section className="section" id="experience" ref={ref}>
       <SectionHeader eyebrow="02 / Experience" title="Work Experience">
-        Two full-time roles across production products, responsive fixes, testing,
-        deployment support, and full ownership of key frontend work.
+        Four years delivering production frontend features across enterprise
+        platforms, analytics products, and responsive web applications.
       </SectionHeader>
 
       <div className={`experience-layout ${inView ? "is-visible" : ""}`}>

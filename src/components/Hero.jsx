@@ -9,7 +9,7 @@ export function Hero() {
       <div className="hero-copy">
         <p className="availability">
           <span aria-hidden="true" />
-          Open to senior frontend opportunities
+          {profile.availability}
         </p>
         <h1>{profile.name}</h1>
         <p className="typewriter">
@@ -18,9 +18,9 @@ export function Hero() {
         </p>
         <p className="hero-summary">{profile.summary}</p>
         <p className="hero-detail">
-          Currently at Lapis Data Analytics and previously at Bloomlync. I care
-          about readable React code, stable responsive layouts, and shipping UI
-          that users can trust.
+          Four years of frontend experience across production products at Lapis
+          Data Analytics and Bloomlync. I build reusable React interfaces,
+          integrate APIs, and deliver reliable features with engineering teams.
         </p>
         <div className="hero-actions">
           <a className="button primary" href="#experience">

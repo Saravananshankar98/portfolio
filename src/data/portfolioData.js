@@ -1,14 +1,16 @@
 export const profile = {
   name: "Saravanan S",
-  role: "Frontend React Developer",
-  location: "Thiruvannamalai, Tamil Nadu, India",
+  role: "Front End Engineer | React.js | TypeScript",
+  location: "Chennai, Tamil Nadu, India",
   email: "saravananvijay005@gmail.com",
   phone: "+91 8344781938",
   github: "https://github.com/Saravananshankar98",
-  linkedin: "https://www.linkedin.com/in/saravanan-s-aa257124a/",
-  photo: `${process.env.PUBLIC_URL}/profile.jpg`,
+  linkedin: "https://www.linkedin.com/in/saravanan-s-frontend-engineer/",
+  photo: `${process.env.PUBLIC_URL}/profile.png`,
   summary:
-    "Frontend React Developer with 3+ years of full-time experience building responsive, maintainable web applications with React, TypeScript, Material UI, and modern CSS.",
+    "Front End Engineer with 4 years of experience building responsive, production web applications with React.js, TypeScript, and modern UI libraries. Experienced in reusable components, REST API integration, testing, performance optimization, and end-to-end feature delivery with Agile teams. Immediate joiner.",
+  availability: "Available immediately",
+  portfolio: "https://saravananshankar98.github.io/portfolio",
 };
 
 export const navLinks = [
@@ -23,11 +25,11 @@ export const heroRoles = [
   "Frontend Developer",
   "React.js Specialist",
   "TypeScript Engineer",
-  "UI Builder",
+  "Frontend Engineer",
 ];
 
 export const stats = [
-  { value: "3+", label: "Years experience" },
+  { value: "4", label: "Years experience" },
   { value: "2", label: "Companies" },
   { value: "5+", label: "Product projects" },
   { value: "2", label: "Live products" },
@@ -35,40 +37,41 @@ export const stats = [
 
 export const skills = [
   {
-    title: "Core Web",
-    items: ["HTML5", "CSS3", "JavaScript ES6+"],
+    title: "Frontend",
+    items: [
+      "React.js",
+      "TypeScript",
+      "JavaScript ES6+",
+      "HTML5",
+      "CSS3",
+      "Next.js",
+    ],
     description:
       "Semantic markup, responsive layouts, CSS Grid/Flexbox, animations, and clean JavaScript fundamentals.",
   },
   {
-    title: "React Stack",
-    items: ["React.js", "TypeScript", "Hooks"],
+    title: "UI and Component Development",
+    items: ["Material UI", "PrimeReact", "Tailwind CSS", "Reusable Components"],
     description:
       "Component-driven UIs, typed props and state, reusable hooks, and maintainable frontend architecture.",
   },
   {
-    title: "UI Libraries",
-    items: ["Material UI", "PrimeReact", "Tailwind CSS"],
-    description:
-      "Production UI implementation with consistent components, polished states, and accessible patterns.",
-  },
-  {
     title: "State and API",
-    items: ["Context API", "REST APIs", "Forms"],
+    items: ["React Hooks", "Context API", "Redux", "REST APIs"],
     description:
       "API integration, form workflows, app state, loading states, and real user interaction handling.",
   },
   {
-    title: "Testing",
-    items: ["Jest", "JUnit", "Unit Testing"],
+    title: "Testing and Quality",
+    items: ["Jest", "Unit Testing", "Component Testing", "Code Reviews"],
     description:
-      "Focused tests for components and business logic so releases are easier to trust.",
+      "Component and unit tests, QA collaboration, and code reviews to improve reliability and reduce production defects.",
   },
   {
-    title: "Workflow",
-    items: ["Git", "GitHub", "Jira", "Agile"],
+    title: "Engineering and Delivery",
+    items: ["Code Splitting", "Lazy Loading", "Git", "Jira", "Agile/Scrum", "CI/CD"],
     description:
-      "Branching, build management, sprint work, QA collaboration, and clear delivery communication.",
+      "Performance optimization, release pipelines, sprint planning, branching, and dependable delivery.",
   },
 ];
 
@@ -80,7 +83,7 @@ export const companies = [
     period: "Nov 2024 - Jul 2026",
     current: false,
     summary:
-      "Working on data analytics and blockchain products with a focus on responsive UI fixes, layout reliability, and production frontend quality.",
+      "Owned frontend delivery for the Account Platform across 3+ core modules, from reusable React and TypeScript components and REST API integration through testing, deployment, and production support.",
     projects: [
       {
         name: "Account Platform",
@@ -88,7 +91,7 @@ export const companies = [
         overview:
           "An internal account management platform used to manage account records, account status, and related system configuration data.",
         contribution:
-          "Worked on account listing, create and update flows, CRUD screens, and account status actions such as active, suspend, and terminate. Also contributed to system configuration pages including account client, contact reason, flag, permission rule, and preference type modules.",
+          "Owned frontend development across 3+ core modules, building 10+ reusable React and TypeScript components, integrating REST APIs, and delivering features through testing, deployment, and production release.",
         tech: ["React.js", "TypeScript", "Material UI", "Admin UI"],
       },
       {
@@ -98,7 +101,7 @@ export const companies = [
         overview:
           "A production blockchain analytics and portfolio tracking platform with real-time wallet and asset insights.",
         contribution:
-          "Audited responsive layouts, fixed mobile and tablet breakpoints, corrected alignment issues, and improved cross-device reliability.",
+          "Resolved 15+ responsive layout and component alignment issues, improving UI consistency across screen sizes.",
         tech: ["React.js", "TypeScript", "Material UI", "Responsive CSS"],
       },
       {
@@ -108,7 +111,7 @@ export const companies = [
         overview:
           "A technology leadership and mentoring platform focused on supporting upcoming developers.",
         contribution:
-          "Handled basic frontend changes and small UI fixes based on project requirements.",
+          "Fixed UI and responsive layout issues across 5+ screens for consistent mobile, tablet, and desktop experiences.",
         tech: ["React.js", "CSS", "UI Fixes"],
       },
     ],
@@ -120,7 +123,7 @@ export const companies = [
     period: "Sep 2022 - May 2024",
     current: false,
     summary:
-      "First full-time frontend role, working across racing industry products and growing from implementation work into full ownership of a product module.",
+      "Enhanced production features across Prism-Web, Prism-Terminal, and Mentor ERP, with a focus on responsive reusable UI, Jest testing, performance, and reliable releases.",
     projects: [
       {
         name: "Prism-Web and Prism-Terminal",
@@ -128,7 +131,7 @@ export const companies = [
         overview:
           "Connected frontend products for the global racing industry, including browser workflows and specialized display interfaces.",
         contribution:
-          "Built UI features, managed branches and builds, collaborated with QA, and supported sprint delivery through Jira.",
+          "Enhanced 5+ production features across Prism-Web and Prism-Terminal using React.js, TypeScript, and Material UI, including component development, refactoring, and bug fixes. Maintained CI/CD pipelines across 3+ projects.",
         tech: ["React.js", "TypeScript", "Material UI", "CSS", "Git"],
       },
       {
@@ -137,7 +140,7 @@ export const companies = [
         overview:
           "An ERP frontend with forms, tables, dashboards, and responsive layouts for business operations.",
         contribution:
-          "Developed responsive components, wrote Jest tests, and improved performance with lazy loading and code splitting patterns.",
+          "Built mobile-first layouts for 8+ screens. Implemented Jest tests across 15+ components with 80%+ coverage, wrote 20+ unit tests, and used code splitting and lazy loading to reduce page load time by 30%.",
         tech: ["React.js", "Material UI", "Jest", "Responsive Design"],
       },
     ],
@@ -202,8 +205,8 @@ export const timeline = [
   },
   {
     year: "2023",
-    title: "Led Prism Account Platform",
-    detail: "Design to deployment ownership",
+    title: "Delivered production frontend features",
+    detail: "Prism-Web, Prism-Terminal, and Mentor ERP",
   },
   {
     year: "2024",
@@ -231,11 +234,11 @@ export const aboutStories = [
   },
   {
     title: "First Role - Bloomlync",
-    body: "At Bloomlync, I worked as a Front-End Developer across Prism-Web, Prism-Terminal, Mentor ERP, and the Prism Account Platform. The strongest highlight was taking ownership of the Prism Account Platform end to end.",
+    body: "At Bloomlync, I worked as a Front-End Developer across Prism-Web, Prism-Terminal, and Mentor ERP, delivering production features, responsive screens, component tests, and performance improvements.",
   },
   {
-    title: "Current Role - Lapis Data Analytics",
-    body: "At Lapis Data Analytics, I work on more complex production UIs including ChainEdge, a live blockchain analytics product. My focus is responsive quality, reliable layouts, and clean frontend code.",
+    title: "Lapis Data Analytics",
+    body: "At Lapis Data Analytics, I owned frontend delivery for the Account Platform across 3+ core modules, building reusable components, integrating REST APIs, and supporting testing and releases. I also resolved responsive UI issues across ChainEdge and Talentron.",
   },
   {
     title: "How I Work",
